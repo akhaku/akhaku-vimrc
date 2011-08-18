@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/ammar/nevershopalone/trunk/.settings'
+let g:netrw_dirhist_2='/home/ammar/Documents'
+let g:netrw_dirhist_3='/home/ammar/nevershopalone/trunk'
+let g:netrw_dirhist_4='/home/ammar/nevershopalone/trunk/.settings'
+let g:netrw_dirhist_5='/home/ammar/nevershopalone/trunk/.svn'
+let g:netrw_dirhist_6='/home/ammar/nevershopalone/trunk'
+let g:netrw_dirhist_7='/home/ammar/railsprojects/homesite'
+let g:netrw_dirhist_8='/home/ammar/railsprojects/homesite/test'
+let g:netrw_dirhist_9='/home/ammar/railsprojects/homesite/spec/models'
