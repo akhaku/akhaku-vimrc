@@ -18,7 +18,13 @@ setup_vim_softlinks(){
     current_dir=`pwd`
     ln -s "$current_dir/vimrc" "$HOME/.vimrc"
     ln -s "$current_dir" "$HOME/.vim"
-    printf "Done. Thank you for using my vimrc.\n\n"
+    printf "Done.\n\n"
+}
+
+get_all_plugins(){
+    current_dir=`pwd`
+    printf "getting plugins now"
+    python "$current_dir/get_plugins.py"
 }
 
 printf """
@@ -28,6 +34,7 @@ Requires Vim7 compiled with ruby support for some of the ruby stuff
 
 """
 move_old_vim_files
-
 setup_vim_softlinks
+get_all_plugins
+
 

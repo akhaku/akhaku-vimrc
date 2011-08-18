@@ -14,3 +14,4 @@ for plugin in plugins:
     os.system("git clone %s %s%s" % ( plugin['url'], bundle_dir, plugin['name'] ) )
 
 os.system("rm -rf %s*.git" % bundle_dir)
+print "Got all plugins"
