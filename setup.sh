@@ -13,10 +13,12 @@ fi
 
 }
 
-setup_vim_hardlinks(){
+setup_vim_softlinks(){
+    printf "Making soft links to .vim and .vimrc\n"
     current_dir=`pwd`
-    ln -t "$HOME" "$current_dir/.vim" ".vim"
-    ln -t "$HOME" "$current_dir/.vimrc" ".vimrc"
+    ln -s "$current_dir/vimrc" "$HOME/.vimrc"
+    ln -s "$current_dir" "$HOME/.vim"
+    printf "Done. Thank you for using my vimrc.\n\n"
 }
 
 printf """
@@ -27,5 +29,5 @@ Requires Vim7 compiled with ruby support for some of the ruby stuff
 """
 move_old_vim_files
 
-setup_vim_hardlinks
+setup_vim_softlinks
 
