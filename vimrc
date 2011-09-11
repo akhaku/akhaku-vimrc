@@ -41,3 +41,4 @@ autocmd FileType c,cpp setlocal textwidth=80
 autocmd FileType c,cpp setlocal tw=80
 autocmd FileType c,cpp highlight OverLength ctermbg=red ctermfg=white
 autocmd FileType c,cpp match OverLength /\%81v.\+/
+command Wmake :exec ":w | :make"

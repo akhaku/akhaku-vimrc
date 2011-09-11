@@ -1,6 +1,6 @@
 import os
 
-plugins=[{"name":"supertab", "url":"https://github.com/tsaleh/vim-supertab.git"},
+plugins=[{"name":"supertab", "url":"git://github.com/tsaleh/vim-supertab.git"},
         {"name":"nerdtree", "url":"git://github.com/scrooloose/nerdtree.git"},
         {"name":"rails", "url":"git://github.com/tpope/vim-rails.git"}]
 
