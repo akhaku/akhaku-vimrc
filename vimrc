@@ -36,9 +36,10 @@ vmap <F4> :s/^# //<CR>
 " Setup :make to run ./compile if it's a c or c++ program
 autocmd FileType c,cpp setlocal makeprg=./compile
 
-" For c or c++, set the width to 80 and highlight if it's over
+" Set the width to 80 and highlight if it's over
 set textwidth=80
 set tw=80
+set wrap
 highlight OverLength ctermbg=red ctermfg=white
 match OverLength /\%81v.\+/
 command Wmake :exec ":w | :make"
