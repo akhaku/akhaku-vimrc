@@ -43,3 +43,6 @@ set wrap
 highlight OverLength ctermbg=red ctermfg=white
 match OverLength /\%81v.\+/
 command Wmake :exec ":w | :make"
+
+"insert one character
+noremap q i<Space><Esc>r
