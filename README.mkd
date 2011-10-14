@@ -5,6 +5,7 @@
 
 *Included features*
 ------------------
+* Hit q to append a character after
 * NERDTree support: Hit <C-n> to toggle NERDTree. Hit <?> in the NERDTree viewport to see a list of commands
 * Visual mode code commenting - currently uses '# ' to comment out code. Hit &lt;F2&gt; to comment and &lt;F4&gt; to uncomment
 * Ruby on Rails code completion support with SuperTab - use Tab for the default omnifunc complete, and <C-x><C-u> for the user defined completefunc
