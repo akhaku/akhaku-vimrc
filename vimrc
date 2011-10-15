@@ -45,4 +45,5 @@ match OverLength /\%81v.\+/
 command Wmake :exec ":w | :make"
 
 "insert one character
-noremap q a<Space><Esc>r
+noremap Q a<Space><Esc>r
+noremap q i<Space><Esc>r
