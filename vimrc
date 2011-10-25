@@ -1,4 +1,6 @@
 call pathogen#infect()
+
+"Set up indenting
 filetype indent on
 
 :set expandtab
@@ -35,20 +37,28 @@ vmap <F2> :s/^/# /<CR>
 vmap <F4> :s/^# //<CR>
 
 " Setup :make to run ./compile if it's a c or c++ program
-autocmd FileType c,cpp setlocal makeprg=./compile
 
 " Set the width to 80 and highlight if it's over
-set textwidth=80
-set tw=80
-set wrap
-highlight OverLength ctermbg=red ctermfg=white
-match OverLength /\%81v.\+/
-command Wmake :exec ":w | :make"
+function! InitC()
+ setlocal makeprg=./compile
+  set textwidth=80
+  set tw=80
+  set wrap
+  highlight OverLength ctermbg=red ctermfg=white
+  match OverLength /\%81v.\+/
+  command Wmake :exec ":w | :make"
+endfunction
+
+autocmd FileType c,cpp call InitC()
 
 "insert one character
 noremap Q a<Space><Esc>r
 noremap q i<Space><Esc>r
 
+function! InitHTML()
+  setlocal ts=4
+  setlocal shiftwidth=4
+endfunction
+
 " Html tabstop
-autocmd FileType html setlocal ts=4
-autocmd FileType html setlocal shiftwidth=4
+autocmd FileType html call InitHTML()
