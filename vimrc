@@ -1,4 +1,5 @@
 call pathogen#infect()
+filetype indent on
 
 :set expandtab
 :set ts=4
@@ -47,3 +48,7 @@ command Wmake :exec ":w | :make"
 "insert one character
 noremap Q a<Space><Esc>r
 noremap q i<Space><Esc>r
+
+" Html tabstop
+autocmd FileType html setlocal ts=4
+autocmd FileType html setlocal shiftwidth=4
