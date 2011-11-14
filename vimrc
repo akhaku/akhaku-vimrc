@@ -9,6 +9,8 @@ filetype indent on
 
 :set nu "Line numbers
 
+let g:clipbrdDefaultReg = '+'
+
 " Show row and column number
 :set ruler
 
@@ -45,6 +47,7 @@ function! InitC()
   set tw=80
   set wrap
   highlight OverLength ctermbg=red ctermfg=white
+  match ErrorMsg '\%>80v.\+'
   match OverLength /\%81v.\+/
   command Wmake :exec ":w | :make"
 endfunction
@@ -56,9 +59,11 @@ noremap Q a<Space><Esc>r
 noremap q i<Space><Esc>r
 
 function! InitHTML()
+  setlocal omnifunc=htmlcomplete#CompleteTags
+  setlocal completefunc=htmlcomplete#CompleteTags
   setlocal ts=4
   setlocal shiftwidth=4
 endfunction
 
-" Html tabstop
+" Html and others
 autocmd FileType html call InitHTML()
