@@ -10,6 +10,7 @@ filetype indent on
 :set nu "Line numbers
 
 let g:clipbrdDefaultReg = '+'
+:set guioptions-=m
 
 " Show row and column number
 :set ruler
@@ -47,8 +48,8 @@ function! InitC()
   set tw=80
   set wrap
   highlight OverLength ctermbg=red ctermfg=white
-  match ErrorMsg '\%>80v.\+'
   match OverLength /\%81v.\+/
+  match ErrorMsg /\%81v.\+/
   command Wmake :exec ":w | :make"
 endfunction
 
