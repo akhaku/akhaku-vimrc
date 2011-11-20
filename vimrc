@@ -1,16 +1,21 @@
+" akhaku-vimrc
+" @author: akhaku (Ammar Khaku)
+" Use at your own risk
+" Report bugs to ammar.khaku@gmail.com
+
 call pathogen#infect()
 
-"Set up indenting
+" Set up indenting
 filetype indent on
 
+" Use 4 spaces instead of tab
 :set expandtab
 :set ts=4
 :set shiftwidth=4
 
-:set nu "Line numbers
+:set nu " Line numbers
 
-let g:clipbrdDefaultReg = '+'
-:set guioptions-=m
+:set guioptions-=m " Hide menubar from gvim
 
 " Show row and column number
 :set ruler
@@ -35,22 +40,23 @@ set mat=2
 " Make sure syntax highlighting is enabled
 syntax enable
 
-" Setup commeting and uncommenting
+" Setup commeting and uncommenting (uses # for commenting)
 vmap <F2> :s/^/# /<CR>
 vmap <F4> :s/^# //<CR>
 
-" Setup :make to run ./compile if it's a c or c++ program
+" Paste from system clipboard with Control-P
+nmap <silent> <c-P> "+p
 
-" Set the width to 80 and highlight if it's over
 function! InitC()
- setlocal makeprg=./compile
+  " Run ./compile on the command :Wmake
+  setlocal makeprg=./compile
+  command! Wmake :exec ":w | :make"
   set textwidth=80
   set tw=80
   set wrap
   highlight OverLength ctermbg=red ctermfg=white
-  match OverLength /\%81v.\+/
-  match ErrorMsg /\%81v.\+/
-  command Wmake :exec ":w | :make"
+  match OverLength /\%81v.\+/ " For vim
+  match ErrorMsg /\%81v.\+/ " For gvim
 endfunction
 
 autocmd FileType c,cpp call InitC()
@@ -66,5 +72,5 @@ function! InitHTML()
   setlocal shiftwidth=4
 endfunction
 
-" Html and others
+" Html
 autocmd FileType html call InitHTML()
