@@ -5,6 +5,9 @@
 
 call pathogen#infect()
 
+" Open file at last location
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
+
 " Set up indenting
 filetype indent on
 
