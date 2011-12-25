@@ -74,3 +74,4 @@ endfunction
 
 " Html
 autocmd FileType html call InitHTML()
+set guifont=Monospace\ 9
