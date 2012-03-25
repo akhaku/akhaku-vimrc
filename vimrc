@@ -49,6 +49,15 @@ vmap <F4> :s/^# //<CR>
 
 " Paste from system clipboard with Control-P
 nmap <silent> <c-P> "+p
+" Copy to system clipboard with Control-Y in visual mode
+vmap <silent> <c-Y> "+y
+
+" Map omnicomplete to contol-space
+inoremap <C-space> <C-x><C-o>
+
+"insert one character
+noremap Q a<Space><Esc>r
+noremap q i<Space><Esc>r
 
 function! InitC()
   " Run ./compile on the command :Wmake
@@ -62,19 +71,39 @@ function! InitC()
   match ErrorMsg /\%81v.\+/ " For gvim
 endfunction
 
-autocmd FileType c,cpp call InitC()
-
-"insert one character
-noremap Q a<Space><Esc>r
-noremap q i<Space><Esc>r
+function! InitML()
+  command! Wmake :exec ":w | :make"
+  set textwidth=80
+  set tw=80
+  set wrap
+  highlight OverLength ctermbg=red ctermfg=white
+  match OverLength /\%81v.\+/ " For vim
+  match ErrorMsg /\%81v.\+/ " For gvim
+endfunction
 
 function! InitHTML()
   setlocal omnifunc=htmlcomplete#CompleteTags
-  setlocal completefunc=htmlcomplete#CompleteTags
   setlocal ts=4
   setlocal shiftwidth=4
 endfunction
 
-" Html
+function! InitCSS()
+  setlocal omnifunc=csscomplete#CompleteCSS
+endfunction
+
+function! InitJS()
+  setlocal omnifunc=javascriptcomplete#CompleteJS
+endfunction
+
+function! InitPython()
+  setlocal omnifunc=pythoncomplete#Complete
+endfunction
+
+
+autocmd FileType c,cpp call InitC()
+autocmd FileType sml call InitML()
 autocmd FileType html call InitHTML()
+autocmd FileType css call InitCSS()
+autocmd FileType javascript call InitJS()
+autocmd FileType python call InitPython()
 set guifont=Monospace\ 9

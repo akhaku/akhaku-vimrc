@@ -10,3 +10,4 @@
 * Visual mode code commenting - currently uses '# ' to comment out code. Hit &lt;F2&gt; to comment and &lt;F4&gt; to uncomment
 * Ruby on Rails code completion support with SuperTab - use Tab for the default omnifunc complete, and <C-x><C-u> for the user defined completefunc
 * Autocomplete for html with <C-x><C-u>
+* Copy selected text to system clipboard in visual mode with &lt;C-Y&gt; and paste from system clipboard in normal mode with &lt;C-P&gt;
