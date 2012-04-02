@@ -18,7 +18,7 @@ filetype indent on
 
 :set nu " Line numbers
 
-:set guioptions-=m " Hide menubar from gvim
+:set guioptions= " Hide all bars from gvim
 
 " Show row and column number
 :set ruler
@@ -99,6 +99,10 @@ function! InitPython()
   setlocal omnifunc=pythoncomplete#Complete
 endfunction
 
+function! InitLaTex()
+    command! Wmake : ":w | !pdflatex % && evince $(basename % .tex).pdf"
+endfunction
+
 
 autocmd FileType c,cpp call InitC()
 autocmd FileType sml call InitML()
@@ -106,4 +110,5 @@ autocmd FileType html call InitHTML()
 autocmd FileType css call InitCSS()
 autocmd FileType javascript call InitJS()
 autocmd FileType python call InitPython()
+autocmd FileType tex call InitLaTex()
 set guifont=Monospace\ 9
