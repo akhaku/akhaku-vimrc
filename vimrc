@@ -13,8 +13,8 @@ filetype indent on
 
 " Use 4 spaces instead of tab
 :set expandtab
-:set ts=4
-:set shiftwidth=4
+:set ts=2
+:set shiftwidth=2
 
 :set nu " Line numbers
 
