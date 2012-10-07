@@ -96,6 +96,8 @@ function! InitJS()
 endfunction
 
 function! InitPython()
+  setlocal ts=4
+  setlocal shiftwidth=4
   setlocal omnifunc=pythoncomplete#Complete
 endfunction
 
