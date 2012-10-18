@@ -11,12 +11,13 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'
 " Set up indenting
 filetype indent on
 
-" Use 4 spaces instead of tab
+" Use 2 spaces instead of tab
 :set expandtab
 :set ts=2
 :set shiftwidth=2
 
 :set nu " Line numbers
+:set scrolloff=8 " Don't touch bottom/top of screen by 8
 
 :set guioptions= " Hide all bars from gvim
 
@@ -35,6 +36,9 @@ highlight Pmenu ctermbg=238 gui=bold
 
 " Enable mouse selecting
 set mouse=a
+
+" Highlight the word you're searching for
+set hlsearch
 
 " Set up braces blinking
 set showmatch
@@ -59,6 +63,9 @@ inoremap <C-space> <C-x><C-o>
 noremap Q a<Space><Esc>r
 noremap q i<Space><Esc>r
 
+" Hide generated files from command-t searches
+set wildignore+=*/target/**
+
 function! InitC()
   " Run ./compile on the command :Wmake
   setlocal makeprg=./compile
@@ -69,6 +76,12 @@ function! InitC()
   highlight OverLength ctermbg=red ctermfg=white
   match OverLength /\%81v.\+/ " For vim
   match ErrorMsg /\%81v.\+/ " For gvim
+endfunction
+
+function! InitJava()
+  " Lookup class definitions with gf FIXME
+  set include=^#s*import
+  set includeexpr=substitute(v:fname,'\\.','/','g')
 endfunction
 
 function! InitML()
@@ -113,4 +126,5 @@ autocmd FileType css call InitCSS()
 autocmd FileType javascript call InitJS()
 autocmd FileType python call InitPython()
 autocmd FileType tex call InitLaTex()
+autocmd FileType java call InitJava()
 set guifont=Monospace\ 9

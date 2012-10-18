@@ -3,6 +3,7 @@ import os
 plugins=[{"name":"supertab", "url":"git://github.com/tsaleh/vim-supertab.git"},
         {"name":"nerdtree", "url":"git://github.com/scrooloose/nerdtree.git"},
         {"name":"command-t", "url":"git://git.wincent.com/command-t.git"},
+        {"name":"vim-css-color", "url":"git://github.com/skammer/vim-css-color.git"},
         {"name":"rails", "url":"git://github.com/tpope/vim-rails.git"}]
 
 bundle_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bundle/')
