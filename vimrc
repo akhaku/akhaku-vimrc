@@ -21,6 +21,14 @@ filetype indent on
 
 :set guioptions= " Hide all bars from gvim
 
+" Highlight current line
+:set cul
+
+" Show the 81st column
+:set cc=81
+:hi ColorColumn guibg=#5F5F5F ctermbg=59
+
+
 " Show row and column number
 :set ruler
 
