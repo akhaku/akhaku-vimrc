@@ -5,6 +5,7 @@ plugins=[{"name":"supertab", "url":"git://github.com/tsaleh/vim-supertab.git"},
         {"name":"command-t", "url":"git://git.wincent.com/command-t.git"},
         {"name":"vim-css-color", "url":"git://github.com/skammer/vim-css-color.git"},
         {"name":"vim-less", "url":"https://github.com/groenewege/vim-less.git"},
+        {"name":"vim-java-unused-imports", "url":"git://github.com/akhaku/vim-java-unused-imports.git"},
         {"name":"rails", "url":"git://github.com/tpope/vim-rails.git"}]
 
 bundle_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bundle/')

@@ -39,6 +39,11 @@ autocmd FileType ruby,eruby setlocal omnifunc=syntaxcomplete#Complete
 " Colors
 colorscheme vividchalk
 
+" Get out of insert mode easy
+inoremap jk <esc>
+inoremap <esc> <nop>
+inoremap <c-[> <nop>
+
 " Improve autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
 
