@@ -109,8 +109,8 @@ endfunction
 
 function! InitHTML()
   setlocal omnifunc=htmlcomplete#CompleteTags
-  setlocal ts=4
-  setlocal shiftwidth=4
+  setlocal ts=2
+  setlocal shiftwidth=2
 endfunction
 
 function! InitCSS()
@@ -118,6 +118,8 @@ function! InitCSS()
 endfunction
 
 function! InitJS()
+  setlocal ts=2
+  setlocal shiftwidth=2
   setlocal omnifunc=javascriptcomplete#CompleteJS
 endfunction
 
@@ -136,7 +138,7 @@ autocmd FileType c,cpp call InitC()
 autocmd FileType sml call InitML()
 autocmd FileType html call InitHTML()
 autocmd FileType css call InitCSS()
-autocmd FileType javascript call InitJS()
+autocmd FileType javascript,json call InitJS()
 autocmd FileType python call InitPython()
 autocmd FileType tex call InitLaTex()
 autocmd FileType java call InitJava()
