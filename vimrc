@@ -76,9 +76,6 @@ inoremap <C-space> <C-x><C-o>
 noremap Q a<Space><Esc>r
 noremap q i<Space><Esc>r
 
-" Hide generated files from command-t searches
-set wildignore+=*/target/**
-
 function! InitC()
   " Run ./compile on the command :Wmake
   setlocal makeprg=./compile
@@ -92,9 +89,7 @@ function! InitC()
 endfunction
 
 function! InitJava()
-  " Lookup class definitions with gf FIXME
-  set include=^#s*import
-  set includeexpr=substitute(v:fname,'\\.','/','g')
+  set wildignore+=*/target/**,*/jaxws/**,*.swp
 endfunction
 
 function! InitML()
