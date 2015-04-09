@@ -24,8 +24,8 @@ filetype indent on
 " Highlight current line
 :set cul
 
-" Show the 81st column
-:set cc=81
+" Show the 91st column
+:set cc=91
 :hi ColorColumn guibg=#5F5F5F ctermbg=59
 
 
@@ -137,4 +137,18 @@ autocmd FileType javascript,json call InitJS()
 autocmd FileType python call InitPython()
 autocmd FileType tex call InitLaTex()
 autocmd FileType java call InitJava()
-set guifont=Monospace\ 9
+set guifont=Monospace\ 8
+
+" Set some CommandT options
+let g:CommandTTraverseSCM="pwd"
+let g:CommandTFileScanner="find"
+
+" disable auto-commenting
+set comments-=://
+
+" Fix colorscheme and gitgutter
+highlight clear SignColumn
+highlight GitGutterAdd guibg=Black
+highlight GitGutterChange guibg=Black
+highlight GitGutterDelete guibg=Black
+highlight GitGutterChangeDelete guibg=Black
