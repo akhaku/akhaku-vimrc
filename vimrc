@@ -72,10 +72,6 @@ vmap <silent> <c-Y> "+y
 " Map omnicomplete to contol-space
 inoremap <C-space> <C-x><C-o>
 
-"insert one character
-noremap Q a<Space><Esc>r
-noremap q i<Space><Esc>r
-
 function! InitC()
   " Run ./compile on the command :Wmake
   setlocal makeprg=./compile
@@ -143,6 +139,9 @@ set guifont=Monospace\ 8
 let g:CommandTTraverseSCM="pwd"
 let g:CommandTFileScanner="find"
 
+" Some vim-gitgutter options
+let g:gitgutter_max_signs=5000
+
 " disable auto-commenting
 set comments-=://
 
@@ -152,3 +151,5 @@ highlight GitGutterAdd guibg=Black
 highlight GitGutterChange guibg=Black
 highlight GitGutterDelete guibg=Black
 highlight GitGutterChangeDelete guibg=Black
+
+set lines=999 columns=9999
