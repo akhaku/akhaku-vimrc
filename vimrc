@@ -22,7 +22,9 @@ filetype indent on
 :set guioptions= " Hide all bars from gvim
 
 " Highlight current line
-:set cul
+if has("gui_running")
+  :set cul
+endif
 
 " Show the 91st column
 :set cc=91
@@ -117,7 +119,7 @@ endfunction
 function! InitPython()
   setlocal ts=4
   setlocal shiftwidth=4
-  setlocal omnifunc=pythoncomplete#Complete
+  "setlocal omnifunc=pythoncomplete#Complete
 endfunction
 
 function! InitLaTex()
