@@ -88,6 +88,8 @@ endfunction
 
 function! InitJava()
   set wildignore+=*/target/**,*/jaxws/**,*.swp
+  syntax clear javaError
+  syntax match javaError "+<<<\|=>\|||=\|&&=\|\*\/+"
 endfunction
 
 function! InitML()
