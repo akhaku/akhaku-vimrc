@@ -87,7 +87,7 @@ function! InitC()
 endfunction
 
 function! InitJava()
-  set wildignore+=*/target/**,*/jaxws/**,*.swp
+  set wildignore+=*/jaxws/**,*.swp
   syntax clear javaError
   syntax match javaError "+<<<\|=>\|||=\|&&=\|\*\/+"
 endfunction
