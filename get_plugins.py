@@ -7,6 +7,7 @@ plugins=[{"name":"supertab", "url":"git://github.com/tsaleh/vim-supertab.git"},
         {"name":"vim-less", "url":"https://github.com/groenewege/vim-less.git"},
         {"name":"vim-java-unused-imports", "url":"git://github.com/akhaku/vim-java-unused-imports.git"},
         {"name":"vim-javascript", "url":"git://github.com/pangloss/vim-javascript.git"},
+        {"name":"vim-jsx", "url":"git://github.com/mxw/vim-jsx.git"},
         {"name":"vim-gitgutter", "url":"git://github.com/airblade/vim-gitgutter.git"},
         {"name":"vim-jade", "url":"git://github.com/digitaltoad/vim-jade.git"},
         {"name":"rails", "url":"git://github.com/tpope/vim-rails.git"}]
@@ -33,7 +34,7 @@ os.chdir(old_path)
 # vim-css-color setup
 old_path = os.getcwd()
 os.chdir(bundle_dir)
-os.system("mv vim-css-color/after ../")
+os.system("mv vim-css-color/after/syntax/* ../after/syntax")
 os.chdir(old_path)
 
 print "Got all plugins"

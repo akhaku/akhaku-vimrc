@@ -146,6 +146,9 @@ let g:CommandTFileScanner="find"
 " Some vim-gitgutter options
 let g:gitgutter_max_signs=5000
 
+" vim-jsx options
+let g:jsx_ext_required = 0
+
 " disable auto-commenting
 set comments-=://
 
