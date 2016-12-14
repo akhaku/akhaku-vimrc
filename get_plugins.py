@@ -4,13 +4,15 @@ plugins=[{"name":"supertab", "url":"git://github.com/tsaleh/vim-supertab.git"},
         {"name":"nerdtree", "url":"git://github.com/scrooloose/nerdtree.git"},
         {"name":"command-t", "url":"git://git.wincent.com/command-t.git"},
         {"name":"vim-css-color", "url":"git://github.com/skammer/vim-css-color.git"},
+        {"name":"vim-fugitive", "url":"git@github.com:tpope/vim-fugitive.git"},
         {"name":"vim-less", "url":"https://github.com/groenewege/vim-less.git"},
+        {"name":"thrift.vim", "url":"https://github.com/solarnz/thrift.vim"},
         {"name":"vim-java-unused-imports", "url":"git://github.com/akhaku/vim-java-unused-imports.git"},
         {"name":"vim-javascript", "url":"git://github.com/pangloss/vim-javascript.git"},
         {"name":"vim-jsx", "url":"git://github.com/mxw/vim-jsx.git"},
         {"name":"vim-gitgutter", "url":"git://github.com/airblade/vim-gitgutter.git"},
         {"name":"vim-jade", "url":"git://github.com/digitaltoad/vim-jade.git"},
-        {"name":"rails", "url":"git://github.com/tpope/vim-rails.git"}]
+        {"name":"vim-surround", "url":"https://github.com/tpope/vim-surround.git"}]
 
 bundle_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bundle/')
 
