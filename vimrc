@@ -12,27 +12,28 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'
 filetype indent on
 
 " Use 2 spaces instead of tab
-:set expandtab
-:set ts=2
-:set shiftwidth=2
+set expandtab
+set ts=2
+set shiftwidth=2
 
-:set nu " Line numbers
-:set scrolloff=8 " Don't touch bottom/top of screen by 8
+set nu " Line numbers
+set scrolloff=8 " Don't touch bottom/top of screen by 8
 
-:set guioptions= " Hide all bars from gvim
+set guioptions= " Hide all bars from gvim
 
 " Highlight current line
 if has("gui_running")
-  :set cul
+  set cul
+  set lines=999 columns=9999
 endif
 
 " Show the 91st column
-:set cc=91
+set cc=91
 :hi ColorColumn guibg=#5F5F5F ctermbg=59
 
 
 " Show row and column number
-:set ruler
+set ruler
 
 " Open up NERDTree on <C-n>
 nmap <silent> <c-n> :NERDTreeToggle<CR>
@@ -159,4 +160,3 @@ highlight GitGutterChange guibg=Black
 highlight GitGutterDelete guibg=Black
 highlight GitGutterChangeDelete guibg=Black
 
-set lines=999 columns=9999
