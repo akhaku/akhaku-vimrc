@@ -3,11 +3,23 @@
 1. Download git repository
 2. run setup.sh
 
-*Included features*
+*Included plugins*
 ------------------
-* Hit Q to append a character after the cursor, q for before the cursor
-* NERDTree support: Hit <C-n> to toggle NERDTree. Hit <?> in the NERDTree viewport to see a list of commands
-* Visual mode code commenting - currently uses '# ' to comment out code. Hit &lt;F2&gt; to comment and &lt;F4&gt; to uncomment
-* Ruby on Rails code completion support with SuperTab - use Tab for the default omnifunc complete, and <C-x><C-u> for the user defined completefunc
-* Autocomplete for html with <C-x><C-u>
-* Copy selected text to system clipboard in visual mode with &lt;C-Y&gt; and paste from system clipboard in normal mode with &lt;C-P&gt;
+
+[supertab](https://github.com/ervandew/supertab)
+
+[nerdtree](https://github.com/scrooloose/nerdtree)
+
+[command-t](https://github.com/wincent/command-t)
+
+[vim-fugitive](https://github.com/tpope/vim-fugitive)
+
+[vim-java-unused-imports](https://github.com/akhaku/vim-java-unused-imports)
+
+[vim-javascript](https://github.com/pangloss/vim-javascript)
+
+[vim-jsx](https://github.com/mxw/vim-jsx)
+
+[vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+
+[vim-surround](https://github.com/tpope/vim-surround)
