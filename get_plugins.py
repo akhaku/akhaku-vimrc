@@ -22,7 +22,7 @@ for plugin in plugins:
 os.system("rm -rf %s*.git" % bundle_dir)
 
 # Command-t C-extension setup
-command_t_ext_path = "%scommand-t/ruby/command-t/" % bundle_dir
+command_t_ext_path = "%scommand-t/ruby/command-t/ext/command-t/" % bundle_dir
 old_path = os.getcwd()
 os.chdir(command_t_ext_path)
 os.system("ruby extconf.rb")
