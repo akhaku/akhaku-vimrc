@@ -8,6 +8,7 @@ plugins=[{"name":"supertab", "tag":"2.1", "url":"https://github.com/ervandew/sup
         {"name":"vim-javascript", "tag":"v1.2.2", "url":"https://github.com/pangloss/vim-javascript.git"},
         {"name":"vim-jsx", "tag":"master", "url":"https://github.com/mxw/vim-jsx.git"},
         {"name":"vim-gitgutter", "tag":"master", "url":"https://github.com/airblade/vim-gitgutter.git"},
+        {"name":"vim-gradle", "tag":"master", "url":"https://github.com/tfnico/vim-gradle.git"},
         {"name":"vim-surround", "tag":"v2.1", "url":"https://github.com/tpope/vim-surround.git"}]
 
 bundle_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bundle/')
