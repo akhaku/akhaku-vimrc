@@ -89,6 +89,8 @@ endfunction
 
 function! InitJava()
   set wildignore+=*/jaxws/**,*.swp
+  set ts=4
+  set shiftwidth=4
   syntax clear javaError
   syntax match javaError "+<<<\|=>\|||=\|&&=\|\*\/+"
 endfunction
