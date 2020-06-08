@@ -144,7 +144,7 @@ set guifont=Monospace\ 8
 
 " Set some CommandT options
 let g:CommandTTraverseSCM="pwd"
-let g:CommandTFileScanner="find"
+let g:CommandTFileScanner="git"
 
 " Some vim-gitgutter options
 let g:gitgutter_max_signs=5000
