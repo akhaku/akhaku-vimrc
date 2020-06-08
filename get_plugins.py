@@ -3,6 +3,7 @@ import os
 plugins=[{"name":"supertab", "tag":"2.1", "url":"https://github.com/ervandew/supertab.git"},
         {"name":"nerdtree", "tag":"5.0.0", "url":"https://github.com/scrooloose/nerdtree.git"},
         {"name":"command-t", "tag":"5.0.2", "url":"https://github.com/wincent/command-t.git"},
+        {"name":"kotin-vim", "tag":"master", "url":"https://github.com/udalov/kotlin-vim.git"},
         {"name":"vim-fugitive", "tag":"v2.2", "url":"https://github.com/tpope/vim-fugitive.git"},
         {"name":"vim-java-unused-imports", "tag":"v1.0.0", "url":"https://github.com/akhaku/vim-java-unused-imports.git"},
         {"name":"vim-javascript", "tag":"v1.2.2", "url":"https://github.com/pangloss/vim-javascript.git"},
