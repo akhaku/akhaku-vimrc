@@ -146,6 +146,9 @@ let g:gitgutter_max_signs=5000
 " disable auto-commenting
 set comments-=://
 
+" set up fzf
+nnoremap <Leader>t :GFiles<CR>
+
 " Fix colorscheme and gitgutter
 highlight clear SignColumn
 highlight GitGutterAdd guibg=Black
