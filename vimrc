@@ -3,8 +3,6 @@
 " Use at your own risk
 " Report bugs to ammar.khaku@gmail.com
 
-call pathogen#infect()
-
 " Open file at last location
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
@@ -142,15 +140,8 @@ autocmd FileType tex call InitLaTex()
 autocmd FileType java call InitJava()
 set guifont=Monospace\ 8
 
-" Set some CommandT options
-let g:CommandTTraverseSCM="pwd"
-let g:CommandTFileScanner="git"
-
 " Some vim-gitgutter options
 let g:gitgutter_max_signs=5000
-
-" vim-jsx options
-let g:jsx_ext_required = 0
 
 " disable auto-commenting
 set comments-=://
