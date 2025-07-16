@@ -3,12 +3,12 @@
 move_old_vim_files(){
 if [ -e "$HOME/.vim" ]; then
     echo "Moving old .vim to .vim-old"
-    mv "$HOME/.vim" "$HOME/.vim-old"
+    mv "$HOME/.vim" "$HOME/.vim-old" || true
 fi
 
 if [ -e "$HOME/.vimrc" ]; then
     echo "Moving old .vimrc to .vimrc-old"
-    mv "$HOME/.vimrc" "$HOME/.vimrc-old"
+    mv "$HOME/.vimrc" "$HOME/.vimrc-old" || true
 fi
 
 }
