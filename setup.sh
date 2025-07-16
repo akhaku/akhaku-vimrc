@@ -16,8 +16,8 @@ fi
 setup_vim_softlinks(){
     printf "Making soft links to .vim and .vimrc\n"
     current_dir=`pwd`
-    ln -s "$current_dir/vimrc" "$HOME/.vimrc"
-    ln -s "$current_dir" "$HOME/.vim"
+    ln -sf "$current_dir/vimrc" "$HOME/.vimrc"
+    ln -sf "$current_dir" "$HOME/.vim"
     printf "Done.\n\n"
 }
 
