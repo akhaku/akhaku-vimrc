@@ -156,3 +156,7 @@ highlight GitGutterChange guibg=Black
 highlight GitGutterDelete guibg=Black
 highlight GitGutterChangeDelete guibg=Black
 
+" Always show statusline
+set laststatus=2
+set statusline+=%f
+set statusline=%<%f\ %{FugitiveStatusline()}\ %h%m%r%=%-14.(%l,%c%V%)\ %P
