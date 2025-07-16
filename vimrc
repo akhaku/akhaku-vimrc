@@ -120,8 +120,8 @@ function! InitJS()
 endfunction
 
 function! InitPython()
-  setlocal ts=2
-  setlocal shiftwidth=2
+  setlocal ts=4
+  setlocal shiftwidth=4
   "setlocal omnifunc=pythoncomplete#Complete
 endfunction
 
